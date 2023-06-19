@@ -1,26 +1,44 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <div class="container_logo">
+      <div class="logo_weanher">
+        <p>my weather</p>
+      </div>
+      <div class="container-input">
+        <v-input v-model="cityName"></v-input>
+      </div>
+    </div>
+    
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import VInput from "./components/v-input.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    VInput,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.container {
+  background-image: url("../src/assets/i137674.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 810px;
+}
+.container-input {
+  padding-top: 30px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 </style>
