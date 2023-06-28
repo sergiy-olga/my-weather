@@ -8,7 +8,6 @@
         <v-input v-model="cityName"></v-input>
       </div>
     </div>
-    
   </div>
 </template>
 
@@ -40,5 +39,8 @@ export default {
 ul {
   list-style: none;
   padding: 0;
+}
+.chart{
+  background: rgb(252, 253, 250);
 }
 </style>

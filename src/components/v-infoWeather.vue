@@ -325,13 +325,18 @@
         </div>
       </div>
     </div>
+    <div class="chart">
+      <v-chart :weatherChart="weatherInfo"></v-chart>
+    </div>
   </div>
 </template>
 
 <script>
 import { ref } from "vue";
+import vChart from "./v-chart.vue"
 export default {
   name: "v-infoWeather",
+  components: {vChart},
   props: { weatherInfo: Object },
   setup() {
     const date = new Date();

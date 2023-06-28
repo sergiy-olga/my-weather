@@ -42,7 +42,7 @@ export default {
     const isOpenInfo = ref(false);
 
     watch(city, (newValue) => {
-      // isOpen.value = true;
+      isOpen.value = true;
       cityName.value = newValue;
       getCoords();
       // console.log(isOpen, 'watch')
@@ -70,14 +70,10 @@ export default {
         )
         .then((response) => {
           inf.value = response;
-          console.log(inf.value);
-          console.log(isOpen)
           if (inf.value) {
             isOpen.value = false;
             city.value = "";
             isOpenInfo.value = true;
-            console.log(inf.value);
-          console.log(isOpen)
           }
         });
     }
